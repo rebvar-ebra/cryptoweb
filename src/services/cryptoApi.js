@@ -1,7 +1,7 @@
 import {createApi,fetchBaseQuery} from '@reduxjs/toolkit/query/react';
 
 const createApiHeaders ={
-    'X-RapidAPI-Key': process.env.REACT_APP_RAPIDAPI_KEY,
+    'X-RapidAPI-Key': process.env.REACT_APP_RAPIDAPI_KEY ,
     'X-RapidAPI-Host': process.env.REACT_APP_CRYPTO_RAPIDAPI_HOST
 
 }
@@ -23,7 +23,7 @@ export const cryptoApi= createApi({
       
           // Note: Change the coin price history endpoint from this - `coin/${coinId}/history/${timeperiod} to this - `coin/${coinId}/history?timeperiod=${timeperiod}`
           getCryptoHistory: builder.query({
-            query: ({ coinId, timeperiod }) => createRequest(`coin/${coinId}/history?timeperiod=${timeperiod}`),
+            query: ({ coinId, timeperiod }) => createRequest(`coin/${coinId}/history?timePeriod=${timeperiod}`),
           }),
       
           // Note: To access this endpoint you need premium plan
